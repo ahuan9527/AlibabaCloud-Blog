@@ -1,0 +1,26 @@
+package org.foon.blog.login.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+/**
+ * @Description <跨域配置类>
+ * @DATE 2020/9/27 16:53
+ * @Author ahuan
+ * @ProjectName AlibabaCloud-Blog
+ * @Email a1875884755@gmail.com
+ * @Version 1.0
+ */
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*")
+                .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowCredentials(true)
+                .maxAge(3600)
+                .allowedHeaders("*");
+    }
+}
