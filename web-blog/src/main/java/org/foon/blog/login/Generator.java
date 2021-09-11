@@ -43,7 +43,12 @@ public class Generator {
         throw new MybatisPlusException("请输入正确的" + tip + "！");
     }
 
+    /**
+     * 增加注释，主要用于测试熟悉git
+     * @param args
+     */
     public static void main(String[] args) {
+
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
